@@ -1,0 +1,8 @@
+{
+  "name": "sem_meta_10083_particle",
+  "type": "avro",
+  "schemaGroup": "imaging",
+  "description": "SEM metadata schema for particle data identified by device type 10083.",
+  "evolve": true,
+  "compatibility": "NONE"
+}

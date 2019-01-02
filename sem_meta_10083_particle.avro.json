@@ -1,0 +1,31 @@
+{
+ "type": "record",
+ "namespace": "hortonworks.hdp.refapp.imaging",
+ "name": "sem_meta_10083_particle",
+ "fields": [
+  {
+   "name": "runid",
+   "type": "string"
+  },
+  {
+   "name": "ts",
+   "type": "string"
+  },
+  {
+   "name": "Xloc",
+   "type": "int"
+  },
+  {
+   "name": "Yloc",
+   "type": "int"
+  },
+  {
+   "name": "Xdim",
+   "type": "int"
+  },
+  {
+   "name": "Ydim",
+   "type": "int"
+  }
+ ]
+}

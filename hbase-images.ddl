@@ -1,0 +1,1 @@
+create 'images', {NAME => 'image', IS_MOB => true, MOB_THRESHOLD => 102400},'metadata'

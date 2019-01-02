@@ -1,0 +1,8 @@
+{
+  "name": "sem_meta_10083",
+  "type": "avro",
+  "schemaGroup": "imaging",
+  "description": "SEM metadata schema for device type 10083.",
+  "evolve": true,
+  "compatibility": "NONE"
+}

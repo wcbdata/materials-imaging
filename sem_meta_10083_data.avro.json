@@ -1,0 +1,55 @@
+{
+ "type": "record",
+ "namespace": "hortonworks.hdp.refapp.imaging",
+ "name": "sem_meta_10083_data",
+ "fields": [
+  {
+   "name": "runid",
+   "type": "string"
+  },
+  {
+   "name": "ts",
+   "type": "string"
+  },
+  {
+   "name": "partnum",
+   "type": "string"
+  },
+  {
+   "name": "equipid",
+   "type": "string"
+  },
+  {
+   "name": "hv",
+   "type": "int"
+  },
+  {
+   "name": "mag",
+   "type": "int"
+  },
+  {
+   "name": "wd",
+   "type": "double"
+  },
+  {
+   "name": "det",
+   "type": "string"
+  },
+  {
+   "name": "tilt",
+   "type": "double"
+  },
+  {
+   "name": "feat1",
+   "type": "double"
+  },
+  {
+   "name": "feat2",
+   "type": "double"
+  },
+  {
+   "name": "feat3",
+   "type": "double"
+  }
+ ]
+}

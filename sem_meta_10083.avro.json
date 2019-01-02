@@ -1,0 +1,91 @@
+{
+ "type": "record",
+ "namespace": "hortonworks.hdp.refapp.imaging",
+ "name": "sem_meta_10083",
+ "fields": [
+  {
+   "name": "runid",
+   "type": "string"
+  },
+  {
+   "name": "ts",
+   "type": "string"
+  },
+  {
+   "name": "partnum",
+   "type": "string"
+  },
+  {
+   "name": "equipid",
+   "type": "string"
+  },
+  {
+   "name": "hv",
+   "type": "string"
+  },
+  {
+   "name": "mag",
+   "type": "string"
+  },
+  {
+   "name": "wd",
+   "type": "string"
+  },
+  {
+   "name": "det",
+   "type": "string"
+  },
+  {
+   "name": "tilt",
+   "type": "string"
+  },
+  {
+   "name": "feat1",
+   "type": "string"
+  },
+  {
+   "name": "feat2",
+   "type": "string"
+  },
+  {
+   "name": "feat3",
+   "type": "string"
+  },
+  {
+   "name": "particles",
+   "type": {
+    "type": "array",
+    "items": {
+     "name": "particle",
+     "type": "record",
+     "fields": [
+      {
+       "name": "runid",
+       "type": "string"
+      },
+      {
+       "name": "ts",
+       "type": "string"
+      },
+      {
+       "name": "Xloc",
+       "type": "int"
+      },
+      {
+       "name": "Yloc",
+       "type": "int"
+      },
+      {
+       "name": "Xdim",
+       "type": "int"
+      },
+      {
+       "name": "Ydim",
+       "type": "int"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}
