@@ -19,6 +19,9 @@ There are several sets of files included:
 Consult the article for details and examples of how to run the labs. 
 
 ## To-do Items
-* Add visualization for features identified in images
-* Add TensorFlow to analyze images
-* Clean up Zeppelin visualizations and search interfaces
+- [ ] Add visualization for features identified in images
+- [ ] Add TensorFlow to analyze images
+- [ ] Clean up Zeppelin visualizations and search interfaces
+
+## License
+Project content is licensed under GNU AFFERO GENERAL PUBLIC LICENSE Version 3 except where original licenses such as ASF or GPL apply to source material as noted.
