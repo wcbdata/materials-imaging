@@ -27,3 +27,5 @@ Consult the article for details and examples of how to run the labs.
 
 ## License
 Project content is licensed under GNU AFFERO GENERAL PUBLIC LICENSE Version 3 except where original licenses such as ASF or GPL apply to source material as noted.
+
+Sample data is used with permission of the original owner or after attempts to contact the original owner have failed. If you believe that a resource is improperly used or cited, please contact the owner of this repository.
