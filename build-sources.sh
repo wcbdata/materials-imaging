@@ -1,7 +1,6 @@
 #!/bin/sh
 
 #Image and data file sources
-	cd ~
 	sudo mkdir /etc/imaging
 	sudo cp * /etc/imaging
 	sudo chown -R nifi:hadoop /etc/imaging
