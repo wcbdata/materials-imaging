@@ -1,0 +1,398 @@
+﻿{
+  "paragraphs": [
+    {
+      "title": "Some Basic Tests on Hive",
+      "text": "%jdbc(hive)\n\nuse default;\nshow tables;\n\nselect runid, count(*) from sem_image_data group by runid;\n\nselect * from sem_image_data limit 10;",
+      "dateUpdated": "2019-01-03T21:51:28+0000",
+      "config": {
+        "editorSetting": {
+          "editOnDblClick": false,
+          "language": "sql"
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "title": true,
+        "results": {
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 124,
+              "optionOpen": false
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Query executed successfully. Affected rows : -1"
+          },
+          {
+            "type": "TABLE",
+            "data": "tab_name\nsem_image_data\nsem_image_particle\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "runid\t_c1\n3482359\t38\n3482360\t38\n8571\t32\n8572\t32\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "sem_image_data.runid\tsem_image_data.ts\tsem_image_data.partnum\tsem_image_data.equipid\tsem_image_data.hv\tsem_image_data.mag\tsem_image_data.wd\tsem_image_data.det\tsem_image_data.tilt\tsem_image_data.feat1\tsem_image_data.feat2\tsem_image_data.feat3\tsem_image_data.curr\tsem_image_data.hfw\n3482359\t5/14/2018 8:22:08.0\t238-07\t10021\t2\t10000\t6.9753\tT1\t52.0\t3.0\t3.0\t3.2\t50\t20.7\n3482359\t5/14/2018 8:22:11.7\t238-07\t10021\t2\t10000\t6.9753\tT1\t52.0\t3.0\t3.0\t3.2\t50\t20.7\n3482359\t5/14/2018 8:22:15.4\t238-07\t10021\t2\t10000\t6.9753\tT1\t52.0\t3.0\t3.0\t3.2\t50\t20.7\n3482359\t5/14/2018 8:22:19.1\t238-07\t10021\t2\t10000\t6.9753\tT1\t52.0\t3.0\t3.01\t3.2\t50\t20.7\n3482359\t5/14/2018 8:22:22.8\t238-07\t10021\t2\t10000\t6.9753\tT1\t52.0\t3.0\t3.0\t3.2\t50\t20.7\n3482359\t5/14/2018 8:22:26.5\t238-07\t10021\t2\t10000\t6.9753\tT1\t52.0\t3.0\t3.0\t3.2\t50\t20.7\n3482359\t5/14/2018 8:22:30.2\t238-07\t10021\t2\t10000\t6.9753\tT1\t52.0\t3.0\t3.0\t3.2\t50\t20.7\n3482359\t5/14/2018 8:22:33.9\t238-07\t10021\t2\t10000\t6.9753\tT1\t52.0\t3.0\t3.0\t3.201\t50\t20.7\n3482359\t5/14/2018 8:22:37.6\t238-07\t10021\t2\t10000\t6.9753\tT1\t52.0\t3.0\t3.0\t3.2\t50\t20.7\n3482359\t5/14/2018 8:22:41.3\t238-07\t10021\t2\t10000\t6.9753\tT1\t52.0\t3.0\t3.0\t3.2\t50\t20.7\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1546552149514_-2053300343",
+      "id": "20181023-205458_409091879",
+      "dateCreated": "2019-01-03T21:49:09+0000",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500,
+      "focus": true,
+      "$$hashKey": "object:16451",
+      "user": "admin",
+      "dateFinished": "2019-01-03T21:51:42+0000",
+      "dateStarted": "2019-01-03T21:51:28+0000"
+    },
+    {
+      "text": "%angular\n<!-- Avoid constantly editing JS and list the Angular vars you want exposed in an HTML attribute: -->\n<div id=\"dummy\" vars=\"someScopeVar1,someScopeVar2\"></div>\n<script type=\"text/javascript\">\n  //Given an element in the note & list of values to fetch from Spark\n  //window.angularVars.myVal will be current value of backend Spark val of same name\n  function hoist(element){\n    var varNames = element.attr('vars').split(',');\n    window.angularVars = {};\n    var scope = angular.element(element.parent('.ng-scope')).scope().compiledScope;\n    $.each(varNames, function(i, v){\n      window[v+'-watcher'] = scope.$watch(v, function(newVal, oldVal){\n        window.angularVars[v] = newVal;\n      });\n    });\n  }\n  hoist($('#dummy'));\n</script>\n\n",
+      "dateUpdated": "2019-01-03T21:49:09+0000",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "text"
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/undefined",
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "ANGULAR",
+            "data": "<!-- Avoid constantly editing JS and list the Angular vars you want exposed in an HTML attribute: -->\n<div id=\"dummy\" vars=\"someScopeVar1,someScopeVar2\"></div>\n<script type=\"text/javascript\">\n  //Given an element in the note & list of values to fetch from Spark\n  //window.angularVars.myVal will be current value of backend Spark val of same name\n  function hoist(element){\n    var varNames = element.attr('vars').split(',');\n    window.angularVars = {};\n    var scope = angular.element(element.parent('.ng-scope')).scope().compiledScope;\n    $.each(varNames, function(i, v){\n      window[v+'-watcher'] = scope.$watch(v, function(newVal, oldVal){\n        window.angularVars[v] = newVal;\n      });\n    });\n  }\n  hoist($('#dummy'));\n</script>"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1546552149517_-2055993586",
+      "id": "20181017-195052_501859238",
+      "dateCreated": "2019-01-03T21:49:09+0000",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:16452"
+    },
+    {
+      "title": "SQL Example - Embedding Image URL",
+      "text": "%jdbc(hive)\n\n-- hbase rest daemon needs to be running and SQL below needs to be updated with the correct URL for the HBase Rest API.\n-- For most browsersm, the Hbase daemon needs to be running on the same host as Zeppelin in order to prevent \n-- Cross-Origin Read Blocking (CORB) errors due to XML being loaded from a different host.\n-- Run this as root on the Zeppelin host to start daemon:\n-- /usr/hdp/current/hbase-client/bin/hbase-daemon.sh start rest -p 16050 --infoport 16051\n\nselect runid, \n   ts,  \n   concat(FROM_UNIXTIME(unix_timestamp(ts, 'MM/dd/yyyy hh:mm:ss.SS'),\"yyyy-MM-dd'T'hh:mm:ss+0000|\"),runid) as imageKey, \n   concat('%html <img width=150 src=\"http://172.26.240.208:16050/default:images/', reflect(\"java.net.URLEncoder\", \"encode\",  concat(FROM_UNIXTIME(unix_timestamp(ts, 'MM/dd/yyyy hh:mm:ss.SS'),\"yyyy-MM-dd'T'hh:mm:ss+0000|\"),runid), \"UTF-8\"),'/image\">') as image  \n   from default.sem_image_data \n   limit 10;\n",
+      "dateUpdated": "2019-01-03T21:52:03+0000",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "editOnDblClick": false,
+          "language": "sql"
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "editorHide": false,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "runid\tts\timagekey\timage\n3482359\t5/14/2018 8:22:08.0\t2018-05-14T08:22:08+0000|3482359\t%html <img width=150 src=\"http://172.26.240.208:16050/default:images/2018-05-14T08%3A22%3A08%2B0000%7C3482359/image\">\n3482359\t5/14/2018 8:22:11.7\t2018-05-14T08:22:11+0000|3482359\t%html <img width=150 src=\"http://172.26.240.208:16050/default:images/2018-05-14T08%3A22%3A11%2B0000%7C3482359/image\">\n3482359\t5/14/2018 8:22:15.4\t2018-05-14T08:22:15+0000|3482359\t%html <img width=150 src=\"http://172.26.240.208:16050/default:images/2018-05-14T08%3A22%3A15%2B0000%7C3482359/image\">\n3482359\t5/14/2018 8:22:19.1\t2018-05-14T08:22:19+0000|3482359\t%html <img width=150 src=\"http://172.26.240.208:16050/default:images/2018-05-14T08%3A22%3A19%2B0000%7C3482359/image\">\n3482359\t5/14/2018 8:22:22.8\t2018-05-14T08:22:22+0000|3482359\t%html <img width=150 src=\"http://172.26.240.208:16050/default:images/2018-05-14T08%3A22%3A22%2B0000%7C3482359/image\">\n3482359\t5/14/2018 8:22:26.5\t2018-05-14T08:22:26+0000|3482359\t%html <img width=150 src=\"http://172.26.240.208:16050/default:images/2018-05-14T08%3A22%3A26%2B0000%7C3482359/image\">\n3482359\t5/14/2018 8:22:30.2\t2018-05-14T08:22:30+0000|3482359\t%html <img width=150 src=\"http://172.26.240.208:16050/default:images/2018-05-14T08%3A22%3A30%2B0000%7C3482359/image\">\n3482359\t5/14/2018 8:22:33.9\t2018-05-14T08:22:33+0000|3482359\t%html <img width=150 src=\"http://172.26.240.208:16050/default:images/2018-05-14T08%3A22%3A33%2B0000%7C3482359/image\">\n3482359\t5/14/2018 8:22:37.6\t2018-05-14T08:22:37+0000|3482359\t%html <img width=150 src=\"http://172.26.240.208:16050/default:images/2018-05-14T08%3A22%3A37%2B0000%7C3482359/image\">\n3482359\t5/14/2018 8:22:41.3\t2018-05-14T08:22:41+0000|3482359\t%html <img width=150 src=\"http://172.26.240.208:16050/default:images/2018-05-14T08%3A22%3A41%2B0000%7C3482359/image\">\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1546552149518_-2054839339",
+      "id": "20181126-220711_1904508419",
+      "dateCreated": "2019-01-03T21:49:09+0000",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:16453",
+      "user": "admin",
+      "dateFinished": "2019-01-03T21:52:03+0000",
+      "dateStarted": "2019-01-03T21:52:03+0000"
+    },
+    {
+      "title": "HTML Input UI",
+      "text": "%angular\n\n<!-- Avoid constantly editing JS and list the Angular vars you want exposed in an HTML attribute (courtesy of RanderZander at https://gist.github.com/randerzander/6fec0ff8601bdd6bd25bbefe0847b2d5): -->\n\n To run examples, try this combination: </br>\n  Date: 11/13/2014</br>\n  Time: 09:01:15</br>\n  Run ID: 8571</br>\n  </br>\n  Image ID: hortonsocks</br>\n  </br>\n  \n<div id=\"dummy\" vars=\"zImageKey\"></div>\n\n<script type=\"text/javascript\">\n  //Given an element in the note & list of values to fetch from Spark\n  //window.angularVars.myVal will be current value of backend Spark val of same name\n  function hoist(element){\n    var varNames = element.attr('vars').split(',');\n    window.angularVars = {};\n    var scope = angular.element(element.parent('.ng-scope')).scope().compiledScope;\n    $.each(varNames, function(i, v){\n      window[v+'-watcher'] = scope.$watch(v, function(newVal, oldVal){\n        window.angularVars[v] = newVal;\n      });\n    });\n  }\n  hoist($('#dummy'));\n</script>\n\n<script type=\"text/javascript\">\n\n// Function to pad date and time values\n\nfunction addZeroBefore(n) {\n  return (n < 10 ? '0' : '') + n;\n}\n\n// Function to prepare date key from datetime\n\nfunction mydate1() {\n  d = new Date(document.getElementById(\"imageDateInput\").value);\n  dt = addZeroBefore(d.getDate());\n  mn = d.getMonth();\n  mn++;\n  mn = addZeroBefore(mn);\n  hr = addZeroBefore(d.getHours());\n  mi = addZeroBefore(d.getMinutes());\n  ss = addZeroBefore(d.getSeconds());\n  yy = addZeroBefore(d.getFullYear());\n  \n  var element = $('#imageKeyInput')\n  var currentVal = element.val()\n  \n  element.val(encodeURIComponent(yy + \"-\" + mn + \"-\" + dt + \"T\" + hr + \":\" + mi + \":\" + ss + \"+0000\" + \"|\" + runIdInput.value,\"UTF-8\"));\n  element.trigger('input');\n  element.trigger('change');\n  \n}\n</script>\n\n<form class=\"form-inline\">\n  <div class=\"form-group\">\n    <label for=\"runID\">Run ID: </label>\n    <input type=\"text\" class=\"form-control\" onchange=\"mydate1();\" id=\"runIdInput\" placeholder=\"Run Identifier ...\" ng-model=\"runID\"></input>\n  </div>\n </br>\n </br>\n  <div class=\"form-group\">\n    <label for=\"imageId\">Image ID: </label>\n    <input type=\"text\" class=\"form-control\" id=\"imageIdInput\" placeholder=\"Image Identifier ...\" ng-model=\"imageId\"></input>\n  </div>\n </br>\n  </br>\n  <div class=\"form-group\">\n    <label for=\"imageDate\">Image Date and Time: </label>\n    <input type=\"datetime-local\" step=\"1\" class=\"form-control\"  onchange=\"mydate1();\" id=\"imageDateInput\" placeholder=\"Image Date ...\" ng-model=\"imageDate\"></input>\n  </div>\n   </br>\n   </br>\n  <div class=\"form-group\">\n    <label for=\"imageKeyInput\">Image Key Text: </label>\n    <input type=\"text\" class=\"form-control\" id=\"imageKeyInput\"  placeholder=\"Image Key ...\" ng-model=\"imageKey\"></input>\n  </div>\n </br>\n </br>\n  <button type=\"submit\" class=\"btn btn-primary\" ng-click=\"z.angularBind('zImageKey',imageKey,'20181023-175512_2027379913');z.angularBind('imageKeySrc',imageDate + '|' + runID,'20181023-175512_2027379913');z.angularBind('runID',runID,'20181023-175512_2027379913');z.angularBind('imageId',imageId,'20181023-175512_2027379913');hoist($('#dummy'))\"> Update Display UI</button>\n</form>\n",
+      "dateUpdated": "2019-01-03T21:54:32+0000",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "sql"
+        },
+        "colWidth": 5,
+        "editorMode": "ace/mode/undefined",
+        "editorHide": true,
+        "title": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 219,
+              "optionOpen": false
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "ANGULAR",
+            "data": "<!-- Avoid constantly editing JS and list the Angular vars you want exposed in an HTML attribute (courtesy of RanderZander at https://gist.github.com/randerzander/6fec0ff8601bdd6bd25bbefe0847b2d5): -->\n\n To run examples, try this combination: </br>\n  Date: 11/13/2014</br>\n  Time: 09:01:15</br>\n  Run ID: 8571</br>\n  </br>\n  Image ID: hortonsocks</br>\n  </br>\n  \n<div id=\"dummy\" vars=\"zImageKey\"></div>\n\n<script type=\"text/javascript\">\n  //Given an element in the note & list of values to fetch from Spark\n  //window.angularVars.myVal will be current value of backend Spark val of same name\n  function hoist(element){\n    var varNames = element.attr('vars').split(',');\n    window.angularVars = {};\n    var scope = angular.element(element.parent('.ng-scope')).scope().compiledScope;\n    $.each(varNames, function(i, v){\n      window[v+'-watcher'] = scope.$watch(v, function(newVal, oldVal){\n        window.angularVars[v] = newVal;\n      });\n    });\n  }\n  hoist($('#dummy'));\n</script>\n\n<script type=\"text/javascript\">\n\n// Function to pad date and time values\n\nfunction addZeroBefore(n) {\n  return (n < 10 ? '0' : '') + n;\n}\n\n// Function to prepare date key from datetime\n\nfunction mydate1() {\n  d = new Date(document.getElementById(\"imageDateInput\").value);\n  dt = addZeroBefore(d.getDate());\n  mn = d.getMonth();\n  mn++;\n  mn = addZeroBefore(mn);\n  hr = addZeroBefore(d.getHours());\n  mi = addZeroBefore(d.getMinutes());\n  ss = addZeroBefore(d.getSeconds());\n  yy = addZeroBefore(d.getFullYear());\n  \n  var element = $('#imageKeyInput')\n  var currentVal = element.val()\n  \n  element.val(encodeURIComponent(yy + \"-\" + mn + \"-\" + dt + \"T\" + hr + \":\" + mi + \":\" + ss + \"+0000\" + \"|\" + runIdInput.value,\"UTF-8\"));\n  element.trigger('input');\n  element.trigger('change');\n  \n}\n</script>\n\n<form class=\"form-inline\">\n  <div class=\"form-group\">\n    <label for=\"runID\">Run ID: </label>\n    <input type=\"text\" class=\"form-control\" onchange=\"mydate1();\" id=\"runIdInput\" placeholder=\"Run Identifier ...\" ng-model=\"runID\"></input>\n  </div>\n </br>\n </br>\n  <div class=\"form-group\">\n    <label for=\"imageId\">Image ID: </label>\n    <input type=\"text\" class=\"form-control\" id=\"imageIdInput\" placeholder=\"Image Identifier ...\" ng-model=\"imageId\"></input>\n  </div>\n </br>\n  </br>\n  <div class=\"form-group\">\n    <label for=\"imageDate\">Image Date and Time: </label>\n    <input type=\"datetime-local\" step=\"1\" class=\"form-control\"  onchange=\"mydate1();\" id=\"imageDateInput\" placeholder=\"Image Date ...\" ng-model=\"imageDate\"></input>\n  </div>\n   </br>\n   </br>\n  <div class=\"form-group\">\n    <label for=\"imageKeyInput\">Image Key Text: </label>\n    <input type=\"text\" class=\"form-control\" id=\"imageKeyInput\"  placeholder=\"Image Key ...\" ng-model=\"imageKey\"></input>\n  </div>\n </br>\n </br>\n  <button type=\"submit\" class=\"btn btn-primary\" ng-click=\"z.angularBind('zImageKey',imageKey,'20181023-175512_2027379913');z.angularBind('imageKeySrc',imageDate + '|' + runID,'20181023-175512_2027379913');z.angularBind('runID',runID,'20181023-175512_2027379913');z.angularBind('imageId',imageId,'20181023-175512_2027379913');hoist($('#dummy'))\"> Update Display UI</button>\n</form>"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1546552149519_-2055224088",
+      "id": "20181023-174512_1927422692",
+      "dateCreated": "2019-01-03T21:49:09+0000",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:16454",
+      "user": "admin",
+      "dateFinished": "2019-01-03T21:54:32+0000",
+      "dateStarted": "2019-01-03T21:54:32+0000"
+    },
+    {
+      "title": "HTML Display UI",
+      "text": "%angular\n\n<!-- Need to update URLs below to point to Hbase REST Server. Also need to open ports 16050, 16051, and 50070 -->\n\n<h2>QC Images via HDFS for [{{imageId}}]</h2>\n<img src=\"http://wcb-iot-743-1-0.field.hortonworks.com:50070/webhdfs/v1/apps/imaging/images/{{imageId}}.jpg?op=OPEN\"  width=\"150\"></img>\n\n<h2>QC Images via HBase REST</h2>\n<h3>Run ID  [{{runID}}]</h3>\n<h3>Key [{{zImageKey}}]</h3>\n<img src=\"http://172.26.240.208:16050/default:images/{{zImageKey}}/image\"  width=\"300\"></img>\n\n<div id=\"hbaseRestCall\"></div>\n<h2>The key would be [{{zImageKey}}]</h2>\n</br>\n\n<script type=\"text/javascript\">\n\n var xhr = new XMLHttpRequest();\n //xhr.responseType = 'blob'; //so you can access the response like a normal URL\n //ToDo: This needs to be fixed so it can get the bind variable\n \n xhr.responseType = \"arraybuffer\";\n xhr.onreadystatechange = function () {\n    if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {\n        var img = document.createElement('img');\n        img.src = URL.createObjectURL(xhr.response); //create <img> with src set to the blob\n        document.getElementById('hbaseRestCall')[0].appendChild(img);\n    }\n};\nxhr.open('GET', 'http://172.26.240.208:16050/default:images/' + window.angularVars.zImageKey + '/image', true);\nxhr.setRequestHeader('Accept', 'application/octet-stream');\nxhr.overrideMimeType(\"application/octet-stream\");\nxhr.send();\n</script>",
+      "dateUpdated": "2019-01-03T21:49:09+0000",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "sql"
+        },
+        "colWidth": 7,
+        "editorMode": "ace/mode/undefined",
+        "editorHide": true,
+        "title": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 551.297,
+              "optionOpen": false
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "ANGULAR",
+            "data": "<!-- Need to update URLs below to point to Hbase REST Server. Also need to open ports 16050, 16051, and 50070 -->\n\n<h2>QC Images via HDFS for [{{imageId}}]</h2>\n<img src=\"http://wcb-iot-743-1-0.field.hortonworks.com:50070/webhdfs/v1/apps/imaging/images/{{imageId}}.jpg?op=OPEN\"  width=\"150\"></img>\n\n<h2>QC Images via HBase REST</h2>\n<h3>Run ID  [{{runID}}]</h3>\n<h3>Key [{{zImageKey}}]</h3>\n<img src=\"http://172.26.240.208:16050/default:images/{{zImageKey}}/image\"  width=\"300\"></img>\n\n<div id=\"hbaseRestCall\"></div>\n<h2>The key would be [{{zImageKey}}]</h2>\n</br>\n\n<script type=\"text/javascript\">\n\n var xhr = new XMLHttpRequest();\n //xhr.responseType = 'blob'; //so you can access the response like a normal URL\n //ToDo: This needs to be fixed so it can get the bind variable\n \n xhr.responseType = \"arraybuffer\";\n xhr.onreadystatechange = function () {\n    if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {\n        var img = document.createElement('img');\n        img.src = URL.createObjectURL(xhr.response); //create <img> with src set to the blob\n        document.getElementById('hbaseRestCall')[0].appendChild(img);\n    }\n};\nxhr.open('GET', 'http://172.26.240.208:16050/default:images/' + window.angularVars.zImageKey + '/image', true);\nxhr.setRequestHeader('Accept', 'application/octet-stream');\nxhr.overrideMimeType(\"application/octet-stream\");\nxhr.send();\n</script>"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1546552149520_-2044835868",
+      "id": "20181023-175512_2027379913",
+      "dateCreated": "2019-01-03T21:49:09+0000",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:16455"
+    },
+    {
+      "title": "Scala Input",
+      "text": "%spark2\n\nimport org.apache.hadoop.hbase.client._\nimport org.apache.hadoop.hbase.util.Bytes\nimport org.apache.hadoop.hbase.{CellUtil, HBaseConfiguration, TableName}\nimport org.apache.hadoop.conf.Configuration\nimport scala.collection.JavaConverters._\nimport java.util.Base64\n\n// Zookeeper Quorum needs to be set below\n// Need to add dependency for \n//   hbase-client.jar\n//   hbase-common.jar \n//   hbase-protocol.jar\n// in Zeppelin Spark2 interpreter settings\n\n// To run examples, try this combination:\n//  Date: 2018-05-14\n//  Time: 08:22:22\n//  Run ID: 3482359\n\n\n\n println(sc.version);\n\n  def printRow(result : Result) = {\n    val cells = result.rawCells();\n    print( Bytes.toString(result.getRow) + \" : \" )\n    for(cell <- cells){\n      val col_name = Bytes.toString(CellUtil.cloneQualifier(cell))\n      val col_value = Bytes.toString(CellUtil.cloneValue(cell))\n      print(\"(%s,%s) \".format(col_name, col_value))\n    }\n    println()\n  }\n\n  def renderImage(result : Result) = {\n\n      //Retrieve the job cell contents\n      val imageBytes = result.getValue(Bytes.toBytes(\"image\"),Bytes.toBytes(\"jpg\"));\n      \n      //Encode the bytestream as Base64 so that the browser knows what to do\n      val imageEncoded = Base64.getEncoder.encodeToString(imageBytes);\n      \n      //re-render the bound paragraph\n      z.angularBind(\"imageChars\",imageEncoded);\n      z.run(\"20181023-180021_1664672251\")\n      \n  }\n\n  val conf : Configuration = HBaseConfiguration.create()\n  /*\n  Gratitude to examples at https://www.tutorialspoint.com/hbase/hbase_read_data.htm for demonstrating how this actually works\n  From http://hbase.apache.org/0.94/book/zookeeper.html\n  A distributed Apache HBase (TM) installation depends on a running ZooKeeper cluster. All participating nodes and clients\n  need to be able to access the running ZooKeeper ensemble. Apache HBase by default manages a ZooKeeper \"cluster\" for you.\n  It will start and stop the ZooKeeper ensemble as part of the HBase start/stop process. You can also manage the ZooKeeper\n  ensemble independent of HBase and just point HBase at the cluster it should use. To toggle HBase management of ZooKeeper,\n  use the HBASE_MANAGES_ZK variable in conf/hbase-env.sh. This variable, which defaults to true, tells HBase whether to\n  start/stop the ZooKeeper ensemble servers as part of HBase start/stop.\n  */\n  \n  val ZOOKEEPER_QUORUM = \"wcb-iot-743-3-2.field.hortonworks.com,wcb-iot-743-2-1.field.hortonworks.com,wcb-iot-743-1-0.field.hortonworks.com\"\n  conf.set(\"hbase.zookeeper.quorum\", ZOOKEEPER_QUORUM);\n\n  val connection = ConnectionFactory.createConnection(conf)\n  val table = connection.getTable(TableName.valueOf( Bytes.toBytes(\"default:images\") ) )\n\n\n  // println(\"Get Example:\")\n  \n  //var get = new Get(Bytes.toBytes(\"2014-11-13T09:01:15+0000|8571\"))\n  \n  val imageDate = z.input(\"Image Date (YYYY-MM-DD):\").asInstanceOf[String]\n  val imageTimestamp = z.input(\"Image Time (HH:MM:SS):\").asInstanceOf[String]\n  val imageRunId = z.input(\"Image Equipment RunID:\").asInstanceOf[String]\n  \n  //val imageKey = z.get(\"zImageKey\").asInstanceOf[String]\n  \n  val imageKey = imageDate + \"T\" + imageTimestamp + \"+0000|\" + imageRunId\n  \n  z.angularBind(\"imageRunId\",imageRunId);\n  z.angularBind(\"imageKey\",imageKey);\n\n  var get = new Get(Bytes.toBytes(imageKey))\n  var result = table.get(get)\n  //printRow(result)\n  renderImage(result)\n\n  \n  table.close()\n  connection.close()",
+      "dateUpdated": "2019-01-03T21:50:47+0000",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "scala"
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/scala",
+        "editorHide": true,
+        "title": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {
+          "Image Key:": "2014-11-13T09:01:15+0000|8571",
+          "Image Date (YYYY-MM-DD):": "2018-05-14",
+          "Image Time (HH:MM:SS):": "08:22:22",
+          "Image Equipment RunID:": "3482359"
+        },
+        "forms": {
+          "Image Date (YYYY-MM-DD):": {
+            "name": "Image Date (YYYY-MM-DD):",
+            "displayName": "Image Date (YYYY-MM-DD):",
+            "type": "input",
+            "defaultValue": "",
+            "hidden": false,
+            "$$hashKey": "object:17551"
+          },
+          "Image Time (HH:MM:SS):": {
+            "name": "Image Time (HH:MM:SS):",
+            "displayName": "Image Time (HH:MM:SS):",
+            "type": "input",
+            "defaultValue": "",
+            "hidden": false,
+            "$$hashKey": "object:17552"
+          },
+          "Image Equipment RunID:": {
+            "name": "Image Equipment RunID:",
+            "displayName": "Image Equipment RunID:",
+            "type": "input",
+            "defaultValue": "",
+            "hidden": false,
+            "$$hashKey": "object:17553"
+          }
+        }
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\nimport org.apache.hadoop.hbase.client._\n\nimport org.apache.hadoop.hbase.util.Bytes\n\nimport org.apache.hadoop.hbase.{CellUtil, HBaseConfiguration, TableName}\n\nimport org.apache.hadoop.conf.Configuration\n\nimport scala.collection.JavaConverters._\n\nimport java.util.Base64\n2.1.1.2.6.2.0-205\n\nprintRow: (result: org.apache.hadoop.hbase.client.Result)Unit\n\nrenderImage: (result: org.apache.hadoop.hbase.client.Result)Unit\n\nconf: org.apache.hadoop.conf.Configuration = Configuration: core-default.xml, core-site.xml, mapred-default.xml, mapred-site.xml, yarn-default.xml, yarn-site.xml, hdfs-default.xml, hdfs-site.xml, hbase-default.xml, hbase-site.xml\n\nZOOKEEPER_QUORUM: String = wcb-iot-743-3-2.field.hortonworks.com,wcb-iot-743-2-1.field.hortonworks.com,wcb-iot-743-1-0.field.hortonworks.com\n\nconnection: org.apache.hadoop.hbase.client.Connection = hconnection-0x16c5fc9c\n\ntable: org.apache.hadoop.hbase.client.Table = images;hconnection-0x16c5fc9c\n\nimageDate: String = 2018-05-14\n\nimageTimestamp: String = 08:22:22\n\nimageRunId: String = 3482359\n\nimageKey: String = 2018-05-14T08:22:22+0000|3482359\n\nget: org.apache.hadoop.hbase.client.Get = {\"cacheBlocks\":true,\"totalColumns\":0,\"row\":\"2018-05-14T08:22:22+0000|3482359\",\"families\":{},\"maxVersions\":1,\"timeRange\":[0,9223372036854775807]}\n\nresult: org.apache.hadoop.hbase.client.Result = keyvalues={2018-05-14T08:22:22+0000|3482359/image:jpg/1546479239203/Put/vlen=184471/seqid=0}\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1546552149521_-2045220617",
+      "id": "20181214-021549_1316063235",
+      "dateCreated": "2019-01-03T21:49:09+0000",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:16456",
+      "user": "admin",
+      "dateFinished": "2019-01-03T21:50:55+0000",
+      "dateStarted": "2019-01-03T21:50:47+0000"
+    },
+    {
+      "title": "Scala Imaging UI",
+      "text": "%angular\n\n<h2>QC Images for Run ID: {{imageRunId}}</h2>\n<h3>Timestamp key {{imageKey}}</h2>\n</br>\n<image src=\"data:image/jpg;base64,{{imageChars}}\"  width=\"300\"></img>\n",
+      "dateUpdated": "2019-01-03T21:49:09+0000",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "sql"
+        },
+        "colWidth": 6,
+        "editorMode": "ace/mode/undefined",
+        "editorHide": true,
+        "title": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 230.5,
+              "optionOpen": false
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "ANGULAR",
+            "data": "<h2>QC Images for Run ID: {{imageRunId}}</h2>\n<h3>Timestamp key {{imageKey}}</h2>\n</br>\n<image src=\"data:image/jpg;base64,{{imageChars}}\"  width=\"300\"></img>"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1546552149522_-2044066370",
+      "id": "20181023-180021_1664672251",
+      "dateCreated": "2019-01-03T21:49:09+0000",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:16457",
+      "user": "anonymous",
+      "dateFinished": "2019-01-03T21:50:54+0000",
+      "dateStarted": "2019-01-03T21:50:54+0000"
+    },
+    {
+      "text": "%spark2\n",
+      "dateUpdated": "2019-01-03T21:49:09+0000",
+      "config": {
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "editOnDblClick": true,
+          "language": "scala"
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1546552149523_-2044451119",
+      "id": "20181217-224935_1354098548",
+      "dateCreated": "2019-01-03T21:49:09+0000",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500,
+      "$$hashKey": "object:16458"
+    }
+  ],
+  "name": "Imaging",
+  "id": "2E127PDWM",
+  "angularObjects": {
+    "2CHS8UYQQ:shared_process": [],
+    "2CK8A9MEG:shared_process": [],
+    "2C4U48MY3_spark2:shared_process": [],
+    "2CKAY1A8Y:shared_process": [],
+    "2CKEKWY8Z:shared_process": []
+  },
+  "config": {
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {}
+}
