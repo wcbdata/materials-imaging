@@ -15,6 +15,7 @@ There are several sets of files included:
     * mk-image.sh: Create folders for imaging, populated based on sample JPGs and CSV metadata
     * build-sources.sh: Use mk-image.sh to generate full sample set and set up file dependencies for NiFi (must be run on a node with HDF and HDP NameNode installed)
     * copy-files.sh: Copy image sources and control files from a local machine to a remote machine. Utility not needed if the project is git cloned on a machine in the cluster where NiFi and at least an HDP namenode is running.
+* JSON file for Imaging Zeppelin notebook with Hive, Hbase and direct HDFS examples.
     
 Consult the article for details and examples of how to run the labs. 
 
@@ -22,6 +23,7 @@ Consult the article for details and examples of how to run the labs.
 - [ ] Add visualization for features identified in images
 - [ ] Add TensorFlow to analyze images
 - [ ] Clean up Zeppelin visualizations and search interfaces
+- [ ] Storing microscopy data in HDF5/USID Schema to make it available for analysis using standard libraries
 
 ## License
 Project content is licensed under GNU AFFERO GENERAL PUBLIC LICENSE Version 3 except where original licenses such as ASF or GPL apply to source material as noted.
