@@ -1,7 +1,7 @@
 # Materials Testing Imaging
 ## Samples and Labs on HDP
 
-This is a set of labs related to the Hortonworks Community Connection article {toDo: Add link here}.
+This is a set of labs related to the Hortonworks Community Connection article "Image Data Flow for Industrial Imaging" at: https://community.hortonworks.com/articles/232333/image-data-flow-for-industrial-imaging.html
 
 ## Project Contents
 There are several sets of files included:
