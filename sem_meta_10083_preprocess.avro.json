@@ -8,7 +8,7 @@
    "type": "string"
   },
   {
-   "name": "ts",
+   "name": "timestamp",
    "type": "string"
   },
   {
@@ -52,8 +52,11 @@
    "type": "string"
   },
   {
-   "name": "particles",
-   "type": "string"
+   "name": "particle",
+   "type": [
+    "null",
+    "string"
+   ]
   }
  ]
 }
